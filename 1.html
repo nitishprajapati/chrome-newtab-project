@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="1.css">
+        <script type="text/javascript" src="https://theysaidso.com/gadgets/v3/theysaidso.js"></script>
+       
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="clock" data-gr-c-s-loaded="true">
+               
+                    <span id="clocktext" class="clocktext">0:00&nbsp;</span>
+                    <span id="clocktextampm" class="clocktextampm">am</span>
+                    
+                    <script>
+                        "use strict";
+                        
+                        var textElem = document.getElementById("clocktext");
+                        var ampmElem = document.getElementById("clocktextampm");
+                        var targetWidth = 0.4;  // Proportion of full screen width
+                        var curFontSize = 5;  // Do not change
+                        
+                        function updateClock() {
+                            var d = new Date();
+                            var s = "";
+                            s += ((d.getHours() + 11) % 12 + 1) + ":";
+                            s += (10 > d.getMinutes() ? "0" : "") + d.getMinutes() + "\u00A0";
+                            //s += d.getHours() >= 12 ? "pm" : "am";
+                            
+                            textElem.textContent = s;
+                            textElem.style.fontSize = 125 + "px";
+                            ampmElem.textContent = d.getHours() >= 12 ? "pm" : "am";
+                            ampmElem.style.fontSize = 40 + "px";
+                            setTimeout(updateClock, 60000 - d.getTime() % 60000 + 100);
+                        }
+                        
+                        
+                        updateClock();
+                    </script>
+                
+            
+         
+            </div> <!-- clock -->
+    
+            <!-- <div id="quote_div" class="tso_simple_borders center_bottom q-t" >
+                 
+
+                <!-- <button onclick="quoteChange()" id="btn1">quotechange</button> 
+            </div> -->
+            <div class="center_bottom myquotestyle">
+                <p id="quotep">‟&nbsp;<span id="#spn"><script id="sc1">TheySaidSo.render({ qod_category: 'life'});</script></span>&nbsp;<span id="quoteclosespan">”</span></p>
+            </div>  
+            <!-- <div class="quote_div2 center_bottom">
+                <span id="spn">" Everything will get better with time. Give time some time. "</span>
+            </div> -->
+        </header>
+        
+    </body>
+</html>
