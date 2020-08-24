@@ -1,0 +1,120 @@
+html,body{
+    margin:0; padding: 0;
+    /*height:100%;
+    overflow:hidden;*/
+    overflow: hidden;
+}
+header{
+    background-image: url(https://source.unsplash.com/1600x900/?aurora);    
+    background-color: white;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/******* QUOTE *********************************************************/
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.center_bottom{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+a{ /*did this to remove hyperlink from quote*/
+    pointer-events: none;
+    cursor: default;
+}
+.myquotestyle{
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    padding-bottom: 9px;
+    margin: -25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s;  
+}
+.myquotestyle:hover{
+    bottom: 19px;
+}
+.myquotestyle:hover .author {
+    color: rgba(255, 255, 255, 0.788);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.author{
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+#quotep{
+    font-size: 40px;
+}
+#quoteclosespan{
+    font-size: 40px;
+}
+/****************************************************************/
+.left{
+    background-color: rgb(35, 161, 245);
+    position: relative;
+    float: left;
+    width: 50%; min-width: 50%;
+    height: 100%; min-height: 100%;
+}
+.right{
+    background-color: whitesmoke;
+    position: relative;
+    float: right;
+    width: 50%; min-width: 50%;
+    height: 100%; min-height: 100%;
+}
+
+/******** CLOCK ****************************************************/
+.clock{
+    display:flex; 
+    height:100%; 
+    margin:0; padding:0; 
+    justify-content:center; 
+    align-items:center;
+}
+.clocktext{
+    font-kerning: none; 
+    font-size: 100px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.4s;
+    /* text-shadow: 0 0 21px rgba(0, 0, 0, 0.377); */
+    text-shadow:0 1px 5px rgba(0,0,0,.1);
+    font-weight: 500;
+    
+}
+.clocktext:hover{
+    cursor: default;
+    transform: translateY(-10px);
+}
+.clocktextampm{
+    font-kerning: none; 
+    font-size: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.4s;
+    /* text-shadow: 0 0 50px rgba(0, 0, 0, 0.89); */
+    text-shadow:0 1px 5px rgba(0,0,0,.1);
+    font-weight: 500;
+}
+.clocktextampm:hover{
+    cursor: default;
+    transform: translateY(-10px);
+}
